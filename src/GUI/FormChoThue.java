@@ -175,18 +175,6 @@ public class FormChoThue extends javax.swing.JDialog {
     private void initComponents() {
 
         lgnvPanel1 = new LIBRARY.lgnvPanel();
-        lgnvPanel2 = new LIBRARY.lgnvPanel();
-        jLabel2 = new javax.swing.JLabel();
-        lgnvTextField1 = new LIBRARY.lgnvTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        pnlDichVuFull = new LIBRARY.lgnvPanel();
-        lgnvPanel3 = new LIBRARY.lgnvPanel();
-        jLabel3 = new javax.swing.JLabel();
-        lgnvPanel4 = new LIBRARY.lgnvPanel();
-        txtKhachHang = new LIBRARY.lgnvTextField();
-        cbKhachHang = new javax.swing.JComboBox<>();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        pnlListKhachHang = new LIBRARY.lgnvPanel();
         lgnvPanel5 = new LIBRARY.lgnvPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -219,6 +207,18 @@ public class FormChoThue extends javax.swing.JDialog {
         jScrollPane3 = new javax.swing.JScrollPane();
         txtMota = new javax.swing.JTextArea();
         btnConfirm = new LIBRARY.lgnvButton();
+        lgnvPanel2 = new LIBRARY.lgnvPanel();
+        jLabel2 = new javax.swing.JLabel();
+        lgnvTextField1 = new LIBRARY.lgnvTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        pnlDichVuFull = new LIBRARY.lgnvPanel();
+        lgnvPanel3 = new LIBRARY.lgnvPanel();
+        jLabel3 = new javax.swing.JLabel();
+        lgnvPanel4 = new LIBRARY.lgnvPanel();
+        txtKhachHang = new LIBRARY.lgnvTextField();
+        cbKhachHang = new javax.swing.JComboBox<>();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        pnlListKhachHang = new LIBRARY.lgnvPanel();
         jLabel1 = new javax.swing.JLabel();
         lgnvPanel6 = new LIBRARY.lgnvPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -233,126 +233,6 @@ public class FormChoThue extends javax.swing.JDialog {
         lgnvPanel1.setLGNV_borderRadius(30);
         lgnvPanel1.setLGNV_lineColor(new java.awt.Color(255, 255, 255));
         lgnvPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        lgnvPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        lgnvPanel2.setLGNV_borderRadius(50);
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(4, 163, 11));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Dịch Vụ");
-
-        lgnvTextField1.setLGNV_placeholderText("Tìm dịch vụ..");
-
-        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
-        jScrollPane1.setBorder(null);
-
-        pnlDichVuFull.setBackground(new java.awt.Color(255, 255, 255));
-        pnlDichVuFull.setLGNV_lineAllow(false);
-        pnlDichVuFull.setLayout(new javax.swing.BoxLayout(pnlDichVuFull, javax.swing.BoxLayout.Y_AXIS));
-        jScrollPane1.setViewportView(pnlDichVuFull);
-
-        javax.swing.GroupLayout lgnvPanel2Layout = new javax.swing.GroupLayout(lgnvPanel2);
-        lgnvPanel2.setLayout(lgnvPanel2Layout);
-        lgnvPanel2Layout.setHorizontalGroup(
-            lgnvPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lgnvPanel2Layout.createSequentialGroup()
-                .addGroup(lgnvPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(lgnvPanel2Layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(lgnvPanel2Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(lgnvTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(lgnvPanel2Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-        lgnvPanel2Layout.setVerticalGroup(
-            lgnvPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lgnvPanel2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lgnvTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-
-        lgnvPanel1.add(lgnvPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 370, 620));
-
-        lgnvPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        lgnvPanel3.setLGNV_borderRadius(50);
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(4, 163, 11));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Khách Hàng");
-
-        lgnvPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        lgnvPanel4.setLGNV_lineAllow(false);
-        lgnvPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtKhachHang.setLGNV_placeholderText("CMND khách hàng");
-        txtKhachHang.setLGNV_radius(0);
-        txtKhachHang.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtKhachHangActionPerformed(evt);
-            }
-        });
-        txtKhachHang.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtKhachHangKeyReleased(evt);
-            }
-        });
-        lgnvPanel4.add(txtKhachHang, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 37));
-
-        cbKhachHang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        lgnvPanel4.add(cbKhachHang, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, -5, 320, 40));
-
-        jScrollPane5.setBackground(new java.awt.Color(255, 255, 255));
-        jScrollPane5.setBorder(null);
-        jScrollPane5.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane5.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        pnlListKhachHang.setBackground(new java.awt.Color(255, 255, 255));
-        pnlListKhachHang.setLGNV_lineAllow(false);
-        pnlListKhachHang.setPreferredSize(new java.awt.Dimension(320, 110));
-        java.awt.FlowLayout flowLayout2 = new java.awt.FlowLayout();
-        flowLayout2.setAlignOnBaseline(true);
-        pnlListKhachHang.setLayout(flowLayout2);
-        jScrollPane5.setViewportView(pnlListKhachHang);
-
-        javax.swing.GroupLayout lgnvPanel3Layout = new javax.swing.GroupLayout(lgnvPanel3);
-        lgnvPanel3.setLayout(lgnvPanel3Layout);
-        lgnvPanel3Layout.setHorizontalGroup(
-            lgnvPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lgnvPanel3Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addGroup(lgnvPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(lgnvPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lgnvPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(lgnvPanel3Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        lgnvPanel3Layout.setVerticalGroup(
-            lgnvPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lgnvPanel3Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lgnvPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
-        );
-
-        lgnvPanel1.add(lgnvPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 70, 480, 240));
 
         lgnvPanel5.setBackground(new java.awt.Color(255, 255, 255));
         lgnvPanel5.setLGNV_borderRadius(70);
@@ -525,7 +405,127 @@ public class FormChoThue extends javax.swing.JDialog {
         });
         lgnvPanel5.add(btnConfirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 550, 117, 64));
 
-        lgnvPanel1.add(lgnvPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 60, 410, 630));
+        lgnvPanel1.add(lgnvPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 440, 700));
+
+        lgnvPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        lgnvPanel2.setLGNV_borderRadius(50);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(4, 163, 11));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Dịch Vụ");
+
+        lgnvTextField1.setLGNV_placeholderText("Tìm dịch vụ..");
+
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setBorder(null);
+
+        pnlDichVuFull.setBackground(new java.awt.Color(255, 255, 255));
+        pnlDichVuFull.setLGNV_lineAllow(false);
+        pnlDichVuFull.setLayout(new javax.swing.BoxLayout(pnlDichVuFull, javax.swing.BoxLayout.Y_AXIS));
+        jScrollPane1.setViewportView(pnlDichVuFull);
+
+        javax.swing.GroupLayout lgnvPanel2Layout = new javax.swing.GroupLayout(lgnvPanel2);
+        lgnvPanel2.setLayout(lgnvPanel2Layout);
+        lgnvPanel2Layout.setHorizontalGroup(
+            lgnvPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lgnvPanel2Layout.createSequentialGroup()
+                .addGroup(lgnvPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(lgnvPanel2Layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(lgnvPanel2Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(lgnvTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(lgnvPanel2Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+        lgnvPanel2Layout.setVerticalGroup(
+            lgnvPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lgnvPanel2Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lgnvTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(775, 775, 775)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        lgnvPanel1.add(lgnvPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 370, 620));
+
+        lgnvPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        lgnvPanel3.setLGNV_borderRadius(50);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(4, 163, 11));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Khách Hàng");
+
+        lgnvPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        lgnvPanel4.setLGNV_lineAllow(false);
+        lgnvPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtKhachHang.setLGNV_placeholderText("CMND khách hàng");
+        txtKhachHang.setLGNV_radius(0);
+        txtKhachHang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtKhachHangActionPerformed(evt);
+            }
+        });
+        txtKhachHang.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtKhachHangKeyReleased(evt);
+            }
+        });
+        lgnvPanel4.add(txtKhachHang, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 37));
+
+        cbKhachHang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        lgnvPanel4.add(cbKhachHang, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, -5, 320, 40));
+
+        jScrollPane5.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane5.setBorder(null);
+        jScrollPane5.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane5.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        pnlListKhachHang.setBackground(new java.awt.Color(255, 255, 255));
+        pnlListKhachHang.setLGNV_lineAllow(false);
+        pnlListKhachHang.setPreferredSize(new java.awt.Dimension(320, 110));
+        java.awt.FlowLayout flowLayout2 = new java.awt.FlowLayout();
+        flowLayout2.setAlignOnBaseline(true);
+        pnlListKhachHang.setLayout(flowLayout2);
+        jScrollPane5.setViewportView(pnlListKhachHang);
+
+        javax.swing.GroupLayout lgnvPanel3Layout = new javax.swing.GroupLayout(lgnvPanel3);
+        lgnvPanel3.setLayout(lgnvPanel3Layout);
+        lgnvPanel3Layout.setHorizontalGroup(
+            lgnvPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lgnvPanel3Layout.createSequentialGroup()
+                .addContainerGap(26, Short.MAX_VALUE)
+                .addGroup(lgnvPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(lgnvPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lgnvPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(lgnvPanel3Layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+        lgnvPanel3Layout.setVerticalGroup(
+            lgnvPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lgnvPanel3Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lgnvPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44))
+        );
+
+        lgnvPanel1.add(lgnvPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, 500, 690));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -575,17 +575,19 @@ public class FormChoThue extends javax.swing.JDialog {
                 .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        lgnvPanel1.add(lgnvPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, 480, 370));
+        lgnvPanel1.add(lgnvPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 330, 480, 370));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lgnvPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1379, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(lgnvPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1028, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lgnvPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 744, Short.MAX_VALUE)
+            .addComponent(lgnvPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 736, Short.MAX_VALUE)
         );
 
         pack();

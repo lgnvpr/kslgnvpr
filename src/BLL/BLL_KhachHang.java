@@ -14,10 +14,12 @@ import GUI.dialogFormKhachHang;
 
 import GUI.main;
 import HELPER.MyComBoBox;
+import HELPER.support;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -64,6 +66,37 @@ public class BLL_KhachHang {
         }
 
     }
+    
+    public static boolean checkValidtate(){
+        dialogFormKhachHang form = main.dialogFormKhachHang;
+        resetError();
+        String getTenKhachHang = form.txtTenKhachHang.getTextValue();
+        String getCMND = form.txtCMND.getTextValue();
+        String getPhone = form.txtSDT.getTextValue();
+        String getDiaChi = form.txtDiaChi.getTextValue();
+        
+        int test = 0;
+
+        if (support.testBieuThuc("^[a-zA-Z ]{3,35}$", support.changeUnicode(getTenKhachHang))) {
+            test += support.thongBaoErrorValidate(3, 35, "không chứa kí tự đặc biệt hoặc số", "Tên", form.lblErrorTenKhachHang, getTenKhachHang);
+        }
+        if(support.testBieuThuc("^0[1-9]{1}[0-9]{8,9}$", getPhone)){
+            test += support.thongBaoErrorValidate(10, 11, "Không đúng định dạng", "Số điện thoại", form.lblErrorSDT, getPhone);
+        }
+        if(support.testBieuThuc("^[0-9]{9,12}$", getCMND)){
+            test += support.thongBaoErrorValidate(9, 12, "Chỉ chứa số", "CMND", form.lblErrorCMND, getCMND);
+        }
+        return  (test==0) ? true : false;
+    }
+    
+    public static void resetError(){
+        dialogFormKhachHang form =main.dialogFormKhachHang;
+        form.lblErrorCMND.setText("");
+        form.lblErrorDiaChi.setText("");
+        form.lblErrorSDT.setText("");
+        form.lblErrorTenKhachHang.setText("");
+    }
+    
     
     public static String getIDTable() {
         JTable tblKhachHang = main.tabKhachHang.tblKhachHang;

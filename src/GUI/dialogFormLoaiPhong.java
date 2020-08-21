@@ -24,27 +24,25 @@ public class dialogFormLoaiPhong extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         css();
-        
+
     }
-    
-    public void css(){
-        this.getRootPane ().setOpaque (false);
-        this.getContentPane ().setBackground (new Color (0, 0, 0, 0));
-        this.setBackground (new Color (0, 0, 0, 0));
-         
-        
+
+    public void css() {
+        this.getRootPane().setOpaque(false);
+        this.getContentPane().setBackground(new Color(0, 0, 0, 0));
+        this.setBackground(new Color(0, 0, 0, 0));
+
     }
-    
+
     String ID = "";
     boolean checkNew = true;
-    
-    public void checkNew(boolean  check){
-        checkNew  = check;
-        if(checkNew){
+
+    public void checkNew(boolean check) {
+        checkNew = check;
+        if (checkNew) {
             btnDelete.setVisible(false);
             btnThem.setText("Thêm");
-        }
-        else {
+        } else {
             ID = BLL_LoaiPhong.getIDTable();
             btnDelete.setVisible(true);
             btnThem.setText("Cập Nhật");
@@ -52,7 +50,6 @@ public class dialogFormLoaiPhong extends javax.swing.JDialog {
         }
         this.setVisible(true);
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -76,7 +73,6 @@ public class dialogFormLoaiPhong extends javax.swing.JDialog {
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtMoTa = new LIBRARY.lgnvTextField();
-        lblErrorMoTa = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -104,7 +100,7 @@ public class dialogFormLoaiPhong extends javax.swing.JDialog {
 
         lblErrorGiaPhong.setForeground(new java.awt.Color(255, 51, 51));
         lblErrorGiaPhong.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblErrorGiaPhong.setText("Không được để trống tên phòng");
+        lblErrorGiaPhong.setText("  ");
         lgnvPanel1.add(lblErrorGiaPhong, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 285, -1));
 
         btnThem.setBackground(new java.awt.Color(100, 89, 242));
@@ -161,11 +157,6 @@ public class dialogFormLoaiPhong extends javax.swing.JDialog {
         txtMoTa.setLGNV_placeholderText("Nhập Tên Phòng");
         lgnvPanel1.add(txtMoTa, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 285, 41));
 
-        lblErrorMoTa.setForeground(new java.awt.Color(255, 51, 51));
-        lblErrorMoTa.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblErrorMoTa.setText("Không được để trống tên phòng");
-        lgnvPanel1.add(lblErrorMoTa, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 285, -1));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -184,17 +175,18 @@ public class dialogFormLoaiPhong extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
-        if(checkNew){
-            BLL_LoaiPhong.insert(BLL_LoaiPhong.getDataForm());
-            
+        if (BLL_LoaiPhong.checkValidate()) {
+            if (checkNew) {
+                BLL_LoaiPhong.insert(BLL_LoaiPhong.getDataForm());
+
+            } else {
+                BLL_LoaiPhong.update(BLL_LoaiPhong.getDataForm());
+            }
+            this.setVisible(false);
         }
-        else {
-            BLL_LoaiPhong.update(BLL_LoaiPhong.getDataForm());
-        }
-        this.setVisible(false);
     }//GEN-LAST:event_btnThemActionPerformed
 
-    
+
     private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
         this.setVisible(false);
     }//GEN-LAST:event_btnCloseActionPerformed
@@ -258,7 +250,6 @@ public class dialogFormLoaiPhong extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     public javax.swing.JLabel lblErrorGiaPhong;
-    public javax.swing.JLabel lblErrorMoTa;
     public javax.swing.JLabel lblErrorTenPhong;
     private LIBRARY.lgnvPanel lgnvPanel1;
     public LIBRARY.lgnvTextField txtGiaPhong;

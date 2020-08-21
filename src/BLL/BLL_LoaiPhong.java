@@ -11,6 +11,7 @@ import GUI.diaLogLocLoaiPhong;
 import GUI.dialogFormLoaiPhong;
 import GUI.main;
 import HELPER.MyComBoBox;
+import HELPER.support;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
@@ -67,6 +68,22 @@ public class BLL_LoaiPhong {
         }
 
     }
+    
+    public static boolean checkValidate(){
+        dialogFormLoaiPhong form = main.dialogFormLoaiPhong;
+        form.lblErrorTenPhong.setText("");
+        String getTenLoaiPhong =form.txtTenLoaiPhong.getTextValue();
+        String getGiaLoaiPhong = form.txtGiaPhong.getTextValue();
+        
+        if(getTenLoaiPhong.length() !=4) form.lblErrorTenPhong.setText("Tên phòng chứa 4 kí tự");
+        if(support.testBieuThuc("^[0-9]$", getGiaLoaiPhong)){
+            form.lblErrorGiaPhong.setText("Giá chỉ chứa chữ số");
+            return false;
+        }
+        return true;
+    }
+    
+    
     
     
 

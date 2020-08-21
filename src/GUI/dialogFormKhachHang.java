@@ -22,34 +22,32 @@ public class dialogFormKhachHang extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         css();
-        
+
     }
-    
-    public void css(){
-        this.getRootPane ().setOpaque (false);
-        this.getContentPane ().setBackground (new Color (0, 0, 0, 0));
-        this.setBackground (new Color (0, 0, 0, 0));
-         
+
+    public void css() {
+        this.getRootPane().setOpaque(false);
+        this.getContentPane().setBackground(new Color(0, 0, 0, 0));
+        this.setBackground(new Color(0, 0, 0, 0));
         
     }
     String ID = "";
     boolean checkNew = true;
-    
-    public  void checkNew(boolean check){
+
+    public void checkNew(boolean check) {
         checkNew = check;
-        
-        if(checkNew){
-            
+
+        if (checkNew) {
+
             btnThem.setText("Thêm");
             btnDelete.setVisible(false);
-        }
-        else {
+        } else {
             ID = BLL.BLL_KhachHang.getIDTable();
             btnThem.setText("Cập Nhật");
             btnDelete.setVisible(true);
         }
         this.setVisible(true);
-        
+
     }
 
     /**
@@ -63,7 +61,6 @@ public class dialogFormKhachHang extends javax.swing.JDialog {
 
         sex = new javax.swing.ButtonGroup();
         lgnvPanel1 = new LIBRARY.lgnvPanel();
-        txtErrroMoTa = new javax.swing.JLabel();
         btnThem = new LIBRARY.lgnvButton();
         lgnvButton1 = new LIBRARY.lgnvButton();
         btnDelete = new LIBRARY.lgnvButton();
@@ -78,10 +75,10 @@ public class dialogFormKhachHang extends javax.swing.JDialog {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        txtErrorTenKhachHang = new javax.swing.JLabel();
-        txtErrorCMND = new javax.swing.JLabel();
-        txtErrorSDT = new javax.swing.JLabel();
-        txtErrorDiaChi = new javax.swing.JLabel();
+        lblErrorTenKhachHang = new javax.swing.JLabel();
+        lblErrorCMND = new javax.swing.JLabel();
+        lblErrorSDT = new javax.swing.JLabel();
+        lblErrorDiaChi = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         rdoKhac = new javax.swing.JRadioButton();
         rdoNam = new javax.swing.JRadioButton();
@@ -97,11 +94,6 @@ public class dialogFormKhachHang extends javax.swing.JDialog {
         lgnvPanel1.setLGNV_ShadownPixel(40);
         lgnvPanel1.setLGNV_lineAllow(false);
         lgnvPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        txtErrroMoTa.setForeground(new java.awt.Color(255, 51, 51));
-        txtErrroMoTa.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        txtErrroMoTa.setText("Không được để trống tên phòng");
-        lgnvPanel1.add(txtErrroMoTa, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 285, -1));
 
         btnThem.setBackground(new java.awt.Color(100, 89, 242));
         btnThem.setForeground(new java.awt.Color(255, 255, 255));
@@ -179,25 +171,25 @@ public class dialogFormKhachHang extends javax.swing.JDialog {
         jLabel12.setText("Địa chỉ");
         lgnvPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 211, -1));
 
-        txtErrorTenKhachHang.setForeground(new java.awt.Color(255, 51, 51));
-        txtErrorTenKhachHang.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        txtErrorTenKhachHang.setText("Không được để trống tên phòng");
-        lgnvPanel1.add(txtErrorTenKhachHang, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 285, -1));
+        lblErrorTenKhachHang.setForeground(new java.awt.Color(255, 51, 51));
+        lblErrorTenKhachHang.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblErrorTenKhachHang.setText("    ");
+        lgnvPanel1.add(lblErrorTenKhachHang, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 285, -1));
 
-        txtErrorCMND.setForeground(new java.awt.Color(255, 51, 51));
-        txtErrorCMND.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        txtErrorCMND.setText("Không được để trống tên phòng");
-        lgnvPanel1.add(txtErrorCMND, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 285, -1));
+        lblErrorCMND.setForeground(new java.awt.Color(255, 51, 51));
+        lblErrorCMND.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblErrorCMND.setText("  ");
+        lgnvPanel1.add(lblErrorCMND, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 285, -1));
 
-        txtErrorSDT.setForeground(new java.awt.Color(255, 51, 51));
-        txtErrorSDT.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        txtErrorSDT.setText("Không được để trống tên phòng");
-        lgnvPanel1.add(txtErrorSDT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 285, -1));
+        lblErrorSDT.setForeground(new java.awt.Color(255, 51, 51));
+        lblErrorSDT.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblErrorSDT.setText(" ");
+        lgnvPanel1.add(lblErrorSDT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 330, 285, -1));
 
-        txtErrorDiaChi.setForeground(new java.awt.Color(255, 51, 51));
-        txtErrorDiaChi.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        txtErrorDiaChi.setText("Không được để trống tên phòng");
-        lgnvPanel1.add(txtErrorDiaChi, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 285, -1));
+        lblErrorDiaChi.setForeground(new java.awt.Color(255, 51, 51));
+        lblErrorDiaChi.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblErrorDiaChi.setText(" ");
+        lgnvPanel1.add(lblErrorDiaChi, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, 285, -1));
 
         jLabel7.setText("Mô Tả");
         lgnvPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, 211, -1));
@@ -237,17 +229,18 @@ public class dialogFormKhachHang extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
-        if(checkNew){
-            BLL.BLL_KhachHang.insert(BLL.BLL_KhachHang.getDataForm());
+        if (BLL.BLL_KhachHang.checkValidtate()) {
+            if (checkNew) {
+                BLL.BLL_KhachHang.insert(BLL.BLL_KhachHang.getDataForm());
+            } else {
+                BLL.BLL_KhachHang.update(BLL.BLL_KhachHang.getDataForm());
+            }
+            this.setVisible(false);
+            BLL.BLL_KhachHang.getALLData();
         }
-        else {
-            BLL.BLL_KhachHang.update(BLL.BLL_KhachHang.getDataForm());
-        }
-        this.setVisible(false);
-        BLL.BLL_KhachHang.getALLData();
     }//GEN-LAST:event_btnThemActionPerformed
-    
-    
+
+
     private void lgnvButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lgnvButton1ActionPerformed
         this.setVisible(false);
     }//GEN-LAST:event_lgnvButton1ActionPerformed
@@ -318,6 +311,10 @@ public class dialogFormKhachHang extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    public javax.swing.JLabel lblErrorCMND;
+    public javax.swing.JLabel lblErrorDiaChi;
+    public javax.swing.JLabel lblErrorSDT;
+    public javax.swing.JLabel lblErrorTenKhachHang;
     private LIBRARY.lgnvButton lgnvButton1;
     private LIBRARY.lgnvPanel lgnvPanel1;
     public javax.swing.JRadioButton rdoKhac;
@@ -326,11 +323,6 @@ public class dialogFormKhachHang extends javax.swing.JDialog {
     private javax.swing.ButtonGroup sex;
     public LIBRARY.lgnvTextField txtCMND;
     public LIBRARY.lgnvTextField txtDiaChi;
-    private javax.swing.JLabel txtErrorCMND;
-    private javax.swing.JLabel txtErrorDiaChi;
-    private javax.swing.JLabel txtErrorSDT;
-    private javax.swing.JLabel txtErrorTenKhachHang;
-    private javax.swing.JLabel txtErrroMoTa;
     public LIBRARY.lgnvTextField txtMoTa;
     public LIBRARY.lgnvTextField txtSDT;
     public LIBRARY.lgnvTextField txtTenKhachHang;

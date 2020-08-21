@@ -202,6 +202,18 @@ public class support {
 
         return input;
     }
+    
+    public static int thongBaoErrorValidate(int min, int max, String NoiDung, String Loai, JLabel lblError, String contentText) {
+        int lenghtText = contentText.length();
+        lblError.setText(Loai + " " + NoiDung);
+        if (lenghtText < min || lenghtText > max) {
+            lblError.setText(Loai + " chỉ chứa từ " + min + "-" + max + " kí tự");
+            if (lenghtText == 0) {
+                lblError.setText("Không được để trống ô " + Loai + " !!");
+            }
+        }
+        return 1;
+    }
 
     public static boolean testBieuThuc(String regax, String input) {
         Pattern pattern = Pattern.compile(regax);
